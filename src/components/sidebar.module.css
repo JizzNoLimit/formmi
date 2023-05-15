@@ -1,0 +1,19 @@
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__nav > button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0 10px 24px;
+    margin: 2px 0;
+    text-align: left;
+}
+
+.sidebar__nav > button:hover,
+.sidebar__nav > button.active{
+    border-right: 3px solid orchid;
+    background-color: #f2f2f2;
+}
