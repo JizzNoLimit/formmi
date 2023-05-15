@@ -7,11 +7,17 @@ export function SidebarClient() {
 
     const router = useRouter()
 
+    const handleNavigations = (path) => {
+        router.push(path)
+    }
+
     return (
         <nav className={styles.sidebar__nav}>
             {MENU_LIST.map((menu, index) => (
                 <button 
                     key={index}
+                    onClick={() => handleNavigations(menu.path)}
+                    className={router.pathname === menu.path ? styles.active : ''}
                 >
                     <Image src={menu.icon} height={19} width={19} alt='menu-icon'/>
                     <span>{menu.name}</span>
