@@ -13,18 +13,20 @@ export function NavbarClient() {
                 </Link>
             </section>
             <section className={styles.search}>
-                <input 
-                    type="search" 
-                    name="" 
-                    id=""
-                    className={styles.search_input}
-                />
+                <form action="">
+                    <input 
+                        type="search" 
+                        name="" 
+                        id=""
+                        className={styles.search_input}
+                    />
+                </form>
                 <span>
                     <Image src='/icons/search-icon.svg' width={18} height={18}  alt="icons" />
                 </span>
             </section>
             <section>
-                <div className={`${styles.auth} login`}>
+                <div className={`${styles.auth} d-none`}>
                     <button
                         onClick={() => router.push('/auth/login')}
                         className={`${styles.auth__login} btn`}
@@ -38,8 +40,19 @@ export function NavbarClient() {
                         Daftar
                     </button>
                 </div>
-                <div className={styles.user}>
-
+                <div className={`${styles.profile__nav}`}>
+                    <div className={styles.profile__nav_notif}>
+                        <Image src="/icons/lonceng-icon.svg" width={19} height={19} alt="notif icon" />
+                    </div>
+                    <div className={styles.profile__nav_user}>
+                        <div className={styles.profile__nav_user_img}>
+                            <Image src="/icons/user-icon.svg" width={30} height={30} alt="user picture" />
+                        </div>
+                        <div className={styles.profile__nav_user_username}>
+                            <h4>jizznolimit</h4>
+                            <p className={styles.role}>Mahasiswa</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </nav>

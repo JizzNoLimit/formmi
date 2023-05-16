@@ -44,7 +44,7 @@ button {
   cursor: pointer;
 }
 
-.login {
+.d-none {
   display: none !important;
 }
 

@@ -13,6 +13,7 @@ export function SidebarClient() {
 
     return (
         <nav className={styles.sidebar__nav}>
+            <h4>Menu</h4>
             {MENU_LIST.map((menu, index) => (
                 <button 
                     key={index}
@@ -23,6 +24,7 @@ export function SidebarClient() {
                     <span>{menu.name}</span>
                 </button>
             ))}
+            <h4>Lainnya</h4>
         </nav>
     )
 }

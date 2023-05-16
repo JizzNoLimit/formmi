@@ -1,15 +1,22 @@
 .navbar {
     position: sticky;
     display: grid;
-    grid-template-columns: 230px auto 260px;
+    grid-template-columns: 230px auto 240px;
     gap: 4px;
     align-items: center;
     flex: 1 1;
     width: 100%;
     height: 60px;
+    background-color: #F8F9F9;
+    box-shadow: 2px 0px 4px #888888;
+    z-index: 10;
 }
 .navbar section:nth-child(1) {
     font-size: 1.4rem;
+}
+.navbar section:nth-child(3) {
+    display: flex;
+    justify-content: right;
 }
 
 .navbar section:nth-child(1),
@@ -55,4 +62,26 @@
 .auth__login {
     color: var(--font-black);
     border: 1px solid var(--font-black);
+}
+
+.profile__nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.profile__nav_user {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.profile__nav_user_username {
+    margin-top: -4px;
+    color: var(--font-black);
+}
+
+.role {
+    font-size: .7em;
 }

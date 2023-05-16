@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.sidebar__nav h4 {
+    margin: 18px 0 4px 24px;
+}
+
 .sidebar__nav > button {
     display: flex;
     align-items: center;
