@@ -78,8 +78,8 @@
 }
 
 .profile__nav_user_username {
-    margin-top: -4px;
     color: var(--font-black);
+    margin-top: -4px;
 }
 
 .role {

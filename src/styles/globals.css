@@ -11,6 +11,8 @@
   --blue--button: #0d6efd;
   --red-button: #FF6969;
   --green-button: #379237;
+
+  --font-pink: #EA5455;
 }
 
 * {
@@ -54,5 +56,6 @@ button {
   font-weight: 600;
   color: var(--font-black);
   border-radius: 6px;
+  cursor: pointer;
 }
 /* End Button */

@@ -44,7 +44,7 @@ export function NavbarClient() {
                     <div className={styles.profile__nav_notif}>
                         <Image src="/icons/lonceng-icon.svg" width={19} height={19} alt="notif icon" />
                     </div>
-                    <div className={styles.profile__nav_user}>
+                    <div className={`${styles.profile__nav_user} btn`}>
                         <div className={styles.profile__nav_user_img}>
                             <Image src="/icons/user-icon.svg" width={30} height={30} alt="user picture" />
                         </div>
