@@ -21,7 +21,7 @@ export function SidebarClient() {
                     onClick={() => handleNavigations(menu.path)}
                     className={router.pathname === menu.path ? styles.active : ''}
                 >
-                    <Image src={menu.icon} height={19} width={19} alt='menu-icon'/>
+                    <Image src={menu.icon} height={20} width={20} alt='menu-icon'/>
                     <span>{menu.name}</span>
                 </button>
             ))}
