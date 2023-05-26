@@ -66,22 +66,19 @@
 
 .profile__nav {
     display: flex;
-    gap: 18px;
+    gap: 10px;
     align-items: center;
 }
 
 .profile__nav_user {
     position: relative;
     display: flex;
-    gap: 10px;
+    gap: 6px;
     align-items: center;
 }
 
 .profile__nav_user_username {
     color: var(--font-black);
-    margin-top: -4px;
-}
-
-.role {
-    font-size: .7em;
+    margin-top: -6px;
+    font-weight: 500;
 }

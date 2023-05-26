@@ -43,15 +43,14 @@ export function NavbarClient() {
                 </div>
                 <div className={`${styles.profile__nav}`}>
                     <div className={styles.profile__nav_notif}>
-                        <Image src="/icons/lonceng-icon.svg" width={22} height={22} alt="notif icon" />
+                        <Image src="/icons/lonceng-icon.svg" width={23} height={23} alt="notif icon" />
                     </div>
                     <div className={`${styles.profile__nav_user} btn`}>
                         <div className={styles.profile__nav_user_img}>
-                            <Image src="/icons/user-icon.svg" width={30} height={30} alt="user picture" />
+                            <Image src="/icons/user-icon.svg" width={32} height={32} alt="user picture" />
                         </div>
                         <div className={styles.profile__nav_user_username}>
-                            <h4>jizznolimit</h4>
-                            <p className={styles.role}>Mahasiswa</p>
+                            <span>jizznolimit</span>
                         </div>
                     </div>
                 </div>
