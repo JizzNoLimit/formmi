@@ -3,12 +3,12 @@
 :root {
   /* Color */
   --white: #fff;
-  --white-gray: #F8F9F9;
+  --white-gray: #F6F8FA;
 
-  --font-black: rgb(27, 26, 26);
-  --border-items: #d8dada;
+  --font-black: #1f2328;
+  --border-items: #d0d7de;
 
-  --blue--button: #0d6efd;
+  --blue-button: #0d6efd;
   --red-button: #FF6969;
   --green-button: #379237;
 
@@ -58,4 +58,17 @@ button {
   border-radius: 6px;
   cursor: pointer;
 }
+
+.btn-login {
+  width: 100%;
+  padding: 8px 10px;
+  font-weight: 500;
+  color: var(--white);
+  border-radius: 6px;
+  background-color: var(--green-button);
+}
 /* End Button */
+
+.link {
+  color: var(--blue-button);
+}
