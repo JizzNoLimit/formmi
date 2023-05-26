@@ -1,6 +1,7 @@
-import { NavbarClient } from "../Navbar"
-import { SidebarClient } from "../Sidebar"
+import React from "react";
 import styles from "./index.module.css"
+import { NavbarClient } from "../navbar/Navbar";
+import { SidebarClient } from "../sidebar/Sidebar";
 
 export function LayoutClient( {children} ) {
     return (

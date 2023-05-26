@@ -1,7 +1,8 @@
+import React from "react";
 import { useRouter } from 'next/router'
 import styles from './sidebar.module.css'
 import Image from 'next/image'
-import { MENU_LIST } from './constans'
+import { MENU_LIST } from "../constans";
 
 export function SidebarClient() {
 
