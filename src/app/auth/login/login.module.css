@@ -16,6 +16,9 @@
 }
 
 .login__header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     font-size: 1.4em;
     font-weight: 400;
     text-align: center;

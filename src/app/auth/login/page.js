@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "./login.module.css"
 import Input from "@/components/elements/inputs/Inputs";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
     const [values, setValues] = useState({
@@ -23,7 +24,7 @@ export default function Page() {
             id: 2,
             name: "password",
             type: "password",
-            placeholder: "Masukan password anda...",
+            placeholder: "Password",
             label: "Password",
         },
     ]
@@ -41,6 +42,9 @@ export default function Page() {
         <main className={styles.login}>
                 <div className={styles.login__container}>
                     <section className={styles.login__header}>
+                        <span>
+                            <Image src={'/formmi.png'} width={44} height={44} alt="logo-formmi" />
+                        </span>
                         <span>Masuk ke Formmi</span>
                     </section>
                     <section className={styles.login__form}>
