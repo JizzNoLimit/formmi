@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "./index.module.css"
-import { NavbarClient } from "../navbar/Navbar";
-import { SidebarClient } from "../sidebar/Sidebar";
+import { NavbarClient } from "@/components/navbar/Navbar";
+import { SidebarClient } from "@/components/sidebar/Sidebar";
+import styles from "./layout.module.css"
 
-export function LayoutClient( {children} ) {
+
+export default function AuthLayout({children}) {
     return (
         <main className={styles.layout}>
             <NavbarClient />
@@ -16,5 +16,5 @@ export function LayoutClient( {children} ) {
                 </section>
             </div>
         </main>
-    )
+    );
 }
