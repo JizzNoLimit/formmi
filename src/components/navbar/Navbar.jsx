@@ -1,8 +1,10 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export function NavbarClient() {
     const router = useRouter()
