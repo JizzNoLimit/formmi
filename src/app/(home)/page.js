@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from "./page.module.css"
+import styles from "./Home.module.css"
 import DashboardList from "@/components/elements/diskusiList/DiskusiList"
 
 export default function Page() {

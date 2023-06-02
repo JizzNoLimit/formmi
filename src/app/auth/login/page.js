@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-import styles from "./login.module.css"
+import styles from "../Auth.module.css"
 import Input from "@/components/elements/inputs/Inputs";
 import Link from "next/link";
 import Image from "next/image";

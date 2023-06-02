@@ -27,3 +27,23 @@
     display: flex;
     flex: 1 1;
 }
+
+/* Home Page */
+.home__content {
+    width: 72%;
+    padding: 24px 18px;
+}
+
+.home__content_header {
+    width: 100%;
+    height: 150px;
+    background-color: aquamarine;
+}
+
+.home__content_header > h2 {
+    font-weight: 500;
+}
+
+.boarding {
+    flex: 1 1;
+}

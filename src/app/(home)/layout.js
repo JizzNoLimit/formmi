@@ -1,6 +1,6 @@
 import { NavbarClient } from "@/components/navbar/Navbar";
 import { SidebarClient } from "@/components/sidebar/Sidebar";
-import styles from "./layout.module.css"
+import styles from "./Home.module.css"
 
 
 export default function Layout({children}) {
