@@ -1,5 +1,6 @@
 .navbar {
     position: sticky;
+    top: 0;
     display: grid;
     grid-template-columns: 230px auto 240px;
     gap: 4px;

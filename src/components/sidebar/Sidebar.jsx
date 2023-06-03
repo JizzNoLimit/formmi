@@ -26,7 +26,7 @@ export function SidebarClient() {
                         className={pathname === menu.path ?  styles.active : ''}
                     >
                         <Image src={menu.icon} height={20} width={20} alt='menu-icon'/>
-                        <span>{menu.name}</span>
+                        <span className={styles.sidebar__nav_title}>{menu.name}</span>
                     </button>
                 )
             })}

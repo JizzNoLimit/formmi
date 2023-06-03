@@ -1,7 +1,5 @@
 .layout {
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100vh;
 }
@@ -11,14 +9,10 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: calc(100vh - 60px);
 }
 
 .sidebar {
-    position: sticky;
-    top: 0;
     width: 230px;
-    height: 100%;
     border-right: 1.3px solid var(--border-items);
 }
 
@@ -30,7 +24,8 @@
 
 /* Home Page */
 .home__content {
-    width: 72%;
+    width: 74%;
+    height: 1000px;
     padding: 24px 18px;
 }
 
@@ -45,5 +40,25 @@
 }
 
 .boarding {
+    position: sticky;
+    top: 0;
     flex: 1 1;
+    border-left: 1.3px solid var(--border-items);
 }
+
+@media only screen and (max-width: 640px) {
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+
+    .home__content {
+        width: 100%;
+    }
+    .boarding {
+        display: none;
+    }
+  }
