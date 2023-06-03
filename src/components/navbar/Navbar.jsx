@@ -10,23 +10,32 @@ export function NavbarClient() {
     const router = useRouter()
     return (
         <nav className={styles.navbar}>
-            <section>
+            <section className={styles.navbar__brand}>
+                <button className={styles.menu__bars}>
+                    <Image src='/icons/bars-icon.svg' width={26} height={26} alt="logo" />
+                </button>
+
                 <Link href={'/'}>
-                    <strong>Formmi</strong> Polsri
+                    <sapan><strong>Formmi</strong> Polsri</sapan>
                 </Link>
             </section>
-            <section className={styles.search}>
-                <form action="">
-                    <input 
-                        type="search" 
-                        name="" 
-                        id=""
-                        className={styles.search_input}
-                    />
-                </form>
-                <span>
-                    <Image src='/icons/search-icon.svg' width={18} height={18}  alt="icons" />
-                </span>
+            <section className={styles.navbar__center}>
+                <div className={styles.logo__mobile}>
+                    <Image src='/formmi.png' width={30} height={30} alt="logo" />
+                </div>
+                <div className={styles.search}>
+                    <form action="">
+                        <input 
+                            type="search" 
+                            name="" 
+                            id=""
+                            className={styles.search_input}
+                        />
+                    </form>
+                    <span>
+                        <Image src='/icons/search-icon.svg' width={18} height={18}  alt="icons" />
+                    </span>
+                </div>
             </section>
             <section>
                 <div className={`${styles.auth} d-none`}>
