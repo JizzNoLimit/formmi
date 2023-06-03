@@ -24,19 +24,3 @@
     border-right: 3px solid orchid;
     background-color: #f2f2f2;
 }
-
-@media only screen and (max-width: 414px) {
-    .sidebar__nav > h4 {
-        display: none;
-    }
-
-    .sidebar__nav button {
-        justify-content: center;
-        padding: 10px 0px;
-    }
-
-    .sidebar__nav_title {
-        display: none;
-    }
-
-}
