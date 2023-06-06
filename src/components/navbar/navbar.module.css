@@ -3,7 +3,7 @@
     top: 0;
     display: grid;
     grid-template-columns: 230px auto 200px;
-    gap: 4px;
+    gap: 14px;
     align-items: center;
     flex: 1 1;
     width: 100%;
@@ -114,5 +114,9 @@
 
     .profile__nav {
         gap: 16px;
+    }
+
+    .auth {
+        display: none;
     }
 }

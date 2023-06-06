@@ -58,7 +58,6 @@ button {
   border-radius: 6px;
   cursor: pointer;
   color: var(--white);
-  background-color: var(--font-pink);
 }
 
 .btn-login {

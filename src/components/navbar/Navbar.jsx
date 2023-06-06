@@ -5,8 +5,10 @@ import Image from "next/image";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useAuthContext } from "@/contexts/AuthContext";
 
 export function NavbarClient() {
+    const [state] = useAuthContext()
     const router = useRouter()
     return (
         <nav className={styles.navbar}>
@@ -38,7 +40,7 @@ export function NavbarClient() {
                 </div>
             </section>
             <section>
-                <div className={`${styles.auth} d-none`}>
+                <div className={!state.isAuthenticated ? styles.auth : 'd-none'}>
                     <button
                         onClick={() => router.push('/auth/login')}
                         className={`${styles.auth__login} btn`}
@@ -52,7 +54,7 @@ export function NavbarClient() {
                         Daftar
                     </button>
                 </div>
-                <div className={`${styles.profile__nav}`}>
+                <div className={state.isAuthenticated ? styles.profile__nav : 'd-none'}>
                     <div className={styles.profile__nav_notif}>
                         <Image src="/icons/lonceng-icon.svg" width={23} height={23} alt="notif icon" />
                     </div>
@@ -61,7 +63,7 @@ export function NavbarClient() {
                             <Image src="/icons/user-icon.svg" width={32} height={32} alt="user picture" />
                         </div>
                         <div className={styles.profile__nav_user_username}>
-                            <span>jizznolimit</span>
+                            <span>{state?.user?.username}</span>
                         </div>
                     </div>
                 </div>
