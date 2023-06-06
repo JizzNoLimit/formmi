@@ -1,6 +1,7 @@
-import Link from "next/link"
+"use client"
 import styles from "./Home.module.css"
 import DashboardList from "@/components/elements/diskusiList/DiskusiList"
+import api from "@/api"
 
 export default function Page() {
     return (

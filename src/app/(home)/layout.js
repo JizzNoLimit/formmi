@@ -7,14 +7,14 @@ export default function Layout({children}) {
     return (
         <main className={styles.layout}>
             <NavbarClient />
-            <div className={styles.layout__container}>
+            <section className={styles.layout__container}>
                 <aside className={styles.sidebar}>
                     <SidebarClient />
                 </aside>
                 <section className={styles.content}>
                     {children}
                 </section>
-            </div>
+            </section>
         </main>
     );
 }

@@ -16,7 +16,7 @@ export function NavbarClient() {
                 </button>
 
                 <Link href={'/'}>
-                    <sapan><strong>Formmi</strong> Polsri</sapan>
+                    <span><strong>Formmi</strong> Polsri</span>
                 </Link>
             </section>
             <section className={styles.navbar__center}>
@@ -27,8 +27,8 @@ export function NavbarClient() {
                     <form action="">
                         <input 
                             type="search" 
-                            name="" 
-                            id=""
+                            name="search" 
+                            id="search"
                             className={styles.search_input}
                         />
                     </form>
@@ -46,7 +46,7 @@ export function NavbarClient() {
                         Masuk
                     </button>
                     <button
-                        onClick={() => router.push('/auth/register')}
+                        onClick={() => router.push('/auth/registrasi')}
                         className={`${styles.auth__signin} btn`}
                     >
                         Daftar
