@@ -1,7 +1,6 @@
-"use client"
 import styles from "./Home.module.css"
-import DashboardList from "@/components/elements/diskusiList/DiskusiList"
 import api from "@/api"
+import DiskusiList from "@/components/elements/diskusiList/DiskusiList"
 
 export default function Page() {
     return (
@@ -11,7 +10,7 @@ export default function Page() {
                 
             </header>
             
-            <DashboardList />
+            <DiskusiList />
         </section>
         <section className={styles.boarding}>
             <h1>Hello world</h1>

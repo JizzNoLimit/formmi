@@ -40,33 +40,37 @@ export function NavbarClient() {
                 </div>
             </section>
             <section>
-                <div className={!state.isAuthenticated ? styles.auth : 'd-none'}>
-                    <button
-                        onClick={() => router.push('/auth/login')}
-                        className={`${styles.auth__login} btn`}
-                    >
-                        Masuk
-                    </button>
-                    <button
-                        onClick={() => router.push('/auth/registrasi')}
-                        className={`${styles.auth__signin} btn`}
-                    >
-                        Daftar
-                    </button>
-                </div>
-                <div className={state.isAuthenticated ? styles.profile__nav : 'd-none'}>
-                    <div className={styles.profile__nav_notif}>
-                        <Image src="/icons/lonceng-icon.svg" width={23} height={23} alt="notif icon" />
-                    </div>
-                    <div className={`${styles.profile__nav_user}`}>
-                        <div className={styles.profile__nav_user_img}>
-                            <Image src="/icons/user-icon.svg" width={32} height={32} alt="user picture" />
+                {state.isAuthenticated ? (
+                    <div className={styles.profile__nav}>
+                        <div className={styles.profile__nav_notif}>
+                            <Image src="/icons/lonceng-icon.svg" width={23} height={23} alt="notif icon" />
                         </div>
-                        <div className={styles.profile__nav_user_username}>
-                            <span>{state?.user?.username}</span>
+                        <div className={`${styles.profile__nav_user}`}>
+                            <div className={styles.profile__nav_user_img}>
+                                <Image src="/icons/user-icon.svg" width={32} height={32} alt="user picture" />
+                            </div>
+                            <div className={styles.profile__nav_user_username}>
+                                <span>{state?.user?.username}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                ) : (
+                        <div className={styles.auth}>
+                            <button
+                                onClick={() => router.push('/auth/login')}
+                                className={`${styles.auth__login} btn`}
+                            >
+                                Masuk
+                            </button>
+                            <button
+                                onClick={() => router.push('/auth/registrasi')}
+                                className={`${styles.auth__signin} btn`}
+                            >
+                                Daftar
+                            </button>
+                        </div>
+                )}
+                
             </section>
         </nav>
     )

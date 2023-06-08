@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import styles from "./inputs.module.css";
 import Link from "next/link";

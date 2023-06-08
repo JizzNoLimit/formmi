@@ -1,3 +1,4 @@
+import React from 'react';
 import AuthProvider from '@/contexts/AuthContext';
 import './globals.css'
 import { cookies } from 'next/headers';

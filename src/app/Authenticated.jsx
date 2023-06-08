@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { useEffect } from "react";
 
 export default function Authenticated() {
-    const [, dispatch] = useAuthContext()
+    const [state, dispatch] = useAuthContext()
     
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'))
