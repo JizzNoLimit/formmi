@@ -1,20 +1,27 @@
 import { NavbarClient } from "@/components/navbar/Navbar";
 import { SidebarAdmin } from "@/components/sidebar/Sidebar";
 import styles from "./admin.module.css"
+import { cookies} from "next/headers";
+import { redirect } from "next/navigation";
+import jwt from "jsonwebtoken";
+import { LayoutAdmin } from "@/components/layout/Layout";
 
+async function AuthPage() {
+    // await authPageAdmin
+    const token = cookies().get('token')?.value
+    const user = jwt.decode(token, process.env.SECREATE_KEY)
+    if (!token || user?.role !== "admin") {
+        redirect('/')
+    }
+    return user
+}
 
-export default function Layout({children}) {
+export default async function Layout({children}) {
+    const user = await AuthPage()
+
     return (
-        <main className={styles.layout}>
-            <NavbarClient />
-            <div className={styles.layout__container}>
-                <aside className={styles.sidebar}>
-                    <SidebarAdmin />
-                </aside>
-                <section className={styles.content}>
-                    {children}
-                </section>
-            </div>
-        </main>
+        <LayoutAdmin user={user}>
+            {children}
+        </LayoutAdmin>
     );
 }

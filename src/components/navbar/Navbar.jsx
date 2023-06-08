@@ -5,10 +5,8 @@ import Image from "next/image";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useAuthContext } from "@/contexts/AuthContext";
 
-export function NavbarClient() {
-    const [state] = useAuthContext()
+export function NavbarClient({user}) {
     const router = useRouter()
     return (
         <nav className={styles.navbar}>
@@ -40,7 +38,7 @@ export function NavbarClient() {
                 </div>
             </section>
             <section>
-                {state.isAuthenticated ? (
+                {user ? (
                     <div className={styles.profile__nav}>
                         <div className={styles.profile__nav_notif}>
                             <Image src="/icons/lonceng-icon.svg" width={23} height={23} alt="notif icon" />
@@ -50,7 +48,7 @@ export function NavbarClient() {
                                 <Image src="/icons/user-icon.svg" width={32} height={32} alt="user picture" />
                             </div>
                             <div className={styles.profile__nav_user_username}>
-                                <span>{state?.user?.username}</span>
+                                <span>{user?.username}</span>
                             </div>
                         </div>
                     </div>

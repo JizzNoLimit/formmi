@@ -1,27 +1,3 @@
-.layout {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-.layout__container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.sidebar {
-    width: 230px;
-    border-right: 1.3px solid var(--border-items);
-}
-
-.content {
-    position: relative;
-    display: flex;
-    flex: 1 1;
-}
-
 /* Home Page */
 .home__content {
     width: 74%;
@@ -46,13 +22,6 @@
     border-left: 1.3px solid var(--border-items);
 }
 
-@media only screen and (max-width: 640px) {
-
-    .sidebar {
-        display: none;
-    }
-}
-
 @media only screen and (max-width: 1030px) {
 
     .home__content {
@@ -61,4 +30,4 @@
     .boarding {
         display: none;
     }
-  }
+}
