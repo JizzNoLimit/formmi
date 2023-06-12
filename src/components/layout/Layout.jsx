@@ -1,10 +1,13 @@
-import React, { Suspense } from "react";
+"use client"
+import React, { Suspense, useState } from "react";
 import { NavbarClient } from "../navbar/Navbar";
 import { SidebarAdmin, SidebarClient } from "../sidebar/Sidebar";
-import Loading from "../loading/Loading";
 import styles from "./layout.module.css";
+import LoadingComponent from "../loading/LoadingComponent";
 
 export function LayoutClient({children, user}) {
+    const [loading, setLoading] = useState(false)
+
     return (
         <main className={styles.layout}>
             <NavbarClient user={user} />
@@ -13,9 +16,7 @@ export function LayoutClient({children, user}) {
                     <SidebarClient />
                 </aside>
                 <section className={styles.content}>
-                    <Suspense fallback={<Loading />}>
-                        {children}
-                    </Suspense>
+                    {children}
                 </section>
             </section>
         </main>
@@ -31,9 +32,7 @@ export function LayoutAdmin({ children, user }) {
                     <SidebarAdmin />
                 </aside>
                 <section className={styles.content}>
-                    <Suspense fallback={<Loading />}>
-                        {children}
-                    </Suspense>
+                    {children}
                 </section>
             </section>
         </main>
