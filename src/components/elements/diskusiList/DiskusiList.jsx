@@ -37,6 +37,17 @@ export default async function DiskusiList({diskusi}) {
     
     return (
         <div className={styles.diskusi__wrapper}>
+            <div className={styles.diskusi__header}>
+                <div>
+                    <h2>Diskusi Teratas</h2>
+                    <p><strong>Total:</strong> {rows} diskusi</p>
+                </div>
+                <div>
+                    <Link href={`diskusi`}>
+                        <button className={styles.diskusi__buatBtn}>Buat Diskusi</button>
+                    </Link>
+                </div>
+            </div>
             {!forums?.data ? (
                 <div className={styles.diskusi__emty}>
                     <p>Diskusi masih kosong, yuk buat diskusi</p>

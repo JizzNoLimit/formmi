@@ -11,6 +11,29 @@
     font-weight: 600;
 }
 
+.diskusi__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.diskusi__header p {
+    margin-top: 6px;
+}
+
+.diskusi__buatBtn {
+    font-weight: 600;
+    padding: 8px 14px;
+    color: #201f1f;
+    background-color: #F7A4A4;
+    border-radius: 8px;
+}
+
+.diskusi__buatBtn:hover {
+    background-color: #f1c4c4;
+}
+
 .diskusi__list {
     display: flex;
     flex-direction: column;
@@ -20,7 +43,7 @@
     margin: 0 auto;
     padding: 22px 20px 22px 28px;
     margin-bottom: 12px;
-    background-color: #F7F5F2;
+    background-color: #eeeae4;
     border-radius: 8px;
 }
 
