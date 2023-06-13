@@ -2,7 +2,14 @@ import styles from "./Home.module.css"
 import api from "@/api"
 import DiskusiList from "@/components/elements/diskusiList/DiskusiList"
 
-export default function Page() {
+async function getData() {
+    const forums = await api.get('forums')
+    return forums.data
+}
+
+export default async function Page() {
+    const forums = await getData()
+
     return (
     <>
         <section className={styles.home__content}>
@@ -10,7 +17,8 @@ export default function Page() {
                 
             </header>
             
-            <DiskusiList />
+            <DiskusiList diskusi={forums} />
+
         </section>
         <section className={styles.boarding}>
             <h1>Hello world</h1>

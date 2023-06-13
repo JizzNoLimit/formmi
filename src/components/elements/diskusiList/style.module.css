@@ -1,0 +1,90 @@
+.diskusi__wrapper {
+    width: 100%;
+    margin: 24px 0 32px 0;
+    padding: 0 32px;
+}
+
+.diskusi__emty {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.diskusi__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 124px;
+    margin: 0 auto;
+    padding: 22px 20px 22px 28px;
+    margin-bottom: 12px;
+    background-color: #F7F5F2;
+    border-radius: 8px;
+}
+
+.diskusi__list:hover {
+    background-color: #F7F5F2;
+}
+
+.diskusi__list:hover .diskusi__tags {
+    background-color: black;
+    color: white;
+}
+
+.diskusi__list_title {
+    width: 100%;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: 400;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.diskusi__list_title p:hover {
+    text-decoration: underline;
+}
+
+.diskusi__list_detail {
+    width: 100%;
+    height: 26px;
+}
+
+.tags__wrap {
+    display: flex;
+    gap: 4px;
+}
+
+.diskusi__tags {
+    display: inline-block;
+    padding: 1px 7px 2px 7px;
+    background-color: var(--pink-button);
+    border-radius: 4px;
+}
+
+.pagination__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 42px;
+    padding: 10px 0px;
+}
+
+.pagination__button {
+    padding: 8px 18px;
+    color: white;
+    background-color: var(--green-button);
+    border-radius: 6px;
+}
+
+.pagination__button_disable {
+    padding: 8px 18px;
+    color: white;
+    background-color: var(--green-button);
+    opacity: .5;
+    cursor: default;
+    border-radius: 6px;
+}

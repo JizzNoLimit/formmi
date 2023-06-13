@@ -4,23 +4,28 @@
     display: flex;
     height: calc(100vh - 60px);
     flex-direction: column;
+    padding: 0 8px;
 }
 
 .sidebar__nav h4 {
-    margin: 18px 0 4px 24px;
+    margin: 18px 16px 4px 16px;
 }
 
 .sidebar__nav > button {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 0 10px 24px;
+    padding: 10px 16px 10px 16px;
     margin: 2px 0;
     text-align: left;
 }
 
-.sidebar__nav > button:hover,
+.sidebar__nav > button:hover {
+    background-color: #DAEAF1;
+    border-radius: 10px;
+}
+
 .sidebar__nav > button.active{
-    border-right: 3px solid orchid;
-    background-color: #f2f2f2;
+    background-color: var(--pink-button);
+    border-radius: 10px;
 }
