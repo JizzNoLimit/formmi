@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import styles from "./inputs.css";
+import styles from "./inputs.module.css";
 import Link from "next/link";
 
 export default function Input(props) {

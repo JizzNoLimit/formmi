@@ -5,10 +5,23 @@
 }
 
 .diskusi__emty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
     width: 100%;
+    height: 182px;
     text-align: center;
-    font-size: 1.3em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 24px 12px;
+    background-color: #F7F5F2;
+    border-radius: 16px;
+}
+
+.diskusi__emty_icon {
+    width: 34px;
+    height: 34px;
 }
 
 .diskusi__header {

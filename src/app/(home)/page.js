@@ -1,14 +1,17 @@
 import styles from "./Home.module.css"
 import api from "@/api"
 import DiskusiList from "@/components/elements/diskusiList/DiskusiList"
+import Link from "next/link"
 
-async function getData() {
-    const forums = await api.get('forums')
+async function getData(page, limit) {
+    if (!page) { page = 1 }
+    const forums = await api.get(`forums?page=${page}&limit=${limit}`)
     return forums.data
 }
 
-export default async function Page() {
-    const forums = await getData()
+export default async function Page({ searchParams }) {
+    const { page, limit } = searchParams
+    const data = await getData(parseInt(page, limit))
 
     return (
     <>
@@ -17,11 +20,12 @@ export default async function Page() {
                 
             </header>
             
-            <DiskusiList diskusi={forums} />
+            <DiskusiList diskusi={data.data} metadata={data.metadata} />
 
         </section>
         <section className={styles.boarding}>
             <h1>Hello world</h1>
+            <Link href={{pathname: '/', query: {id: 'ajiz'}}}>hello</Link>
         </section>
     </>
     )
