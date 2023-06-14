@@ -80,6 +80,7 @@
 
 .profile__nav_user {
     position: relative;
+    position: relative;
     display: flex;
     gap: 6px;
     align-items: center;
@@ -89,6 +90,56 @@
     color: var(--font-black);
     margin-top: -6px;
     font-weight: 500;
+    cursor: pointer;
+}
+
+.usermenu__dropdown {
+    position: absolute;
+    bottom: -168px;
+    right: -14px;
+    gap: 6px;
+    display: none;
+    flex-direction: column;
+    width: 136px;
+    padding: 18px 14px 22px 14px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+.open {
+    display: flex;
+}
+
+.usermenu__dropdown button {
+    text-align: left;
+}
+
+.drop__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.drop__wrapper p {
+    margin-top: -2px;
+}
+
+.keluar__button {
+    margin-top: 8px;
+}
+
+.keluar__button button {
+    width: 100%;
+    padding: 8px 12px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: #f06559;
+    border-radius: 8px;
+}
+
+.drop__menu {
+    width: 22px;
+    height: 22px;
 }
 
 @media only screen and (max-width: 640px) {

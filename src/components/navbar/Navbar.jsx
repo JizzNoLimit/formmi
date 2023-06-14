@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import UserMenu from "./userMenu/UserMenu";
 
 export function NavbarClient({user}) {
     const router = useRouter()
@@ -39,19 +40,7 @@ export function NavbarClient({user}) {
             </section>
             <section>
                 {user ? (
-                    <div className={styles.profile__nav}>
-                        <div className={styles.profile__nav_notif}>
-                            <Image src="/icons/lonceng-icon.svg" width={23} height={23} alt="notif icon" />
-                        </div>
-                        <div className={`${styles.profile__nav_user}`}>
-                            <div className={styles.profile__nav_user_img}>
-                                <Image src="/icons/user-icon.svg" width={32} height={32} alt="user picture" />
-                            </div>
-                            <div className={styles.profile__nav_user_username}>
-                                <span>{user?.username}</span>
-                            </div>
-                        </div>
-                    </div>
+                    <UserMenu username={user?.username} />
                 ) : (
                         <div className={styles.auth}>
                             <button
