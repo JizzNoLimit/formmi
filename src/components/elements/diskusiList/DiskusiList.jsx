@@ -14,7 +14,7 @@ export default async function DiskusiList({diskusi, metadata}) {
                 </div>
                 <div>
                     <Link href={`/diskusi/buat`}>
-                        <button className={styles.diskusi__buatBtn}>Buat Diskusi</button>
+                        <button className={styles.diskusi__buatBtn}>Buat</button>
                     </Link>
                 </div>
             </div>
@@ -34,6 +34,9 @@ export default async function DiskusiList({diskusi, metadata}) {
                                 <Link href={`/diskusi/${diskusi?.id}/${diskusi?.slug}`}>
                                     <p>{diskusi?.title}</p>
                                 </Link>
+                            </div>
+                            <div className={styles.diskusi__list_desk}>
+                                {diskusi?.desk}
                             </div>
                             <div className={styles.diskusi__list_detail}>
                                 <div className={styles.tags__wrap}>
