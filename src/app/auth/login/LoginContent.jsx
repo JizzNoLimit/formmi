@@ -66,7 +66,7 @@ export default function LoginContent() {
                         payload: res.data
                     })
                     setLoading(false)
-                    res?.data?.data?.role === "admin" ? router.push('/admin/dashboard') : router.push('/')
+                    res?.data?.data?.role === "admin" ? router.push('/admin/dashboard') : router.refresh()
                 } else {
                     setValues({
                         ...values,
