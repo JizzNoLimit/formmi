@@ -18,18 +18,27 @@ export function SidebarClient() {
     return (
         <nav className={styles.sidebar__nav}>
             <h4>Menu</h4>
-            {MENU_LIST.map((menu, index) => {
-                return (
-                    <button 
-                        key={index}
-                        onClick={() => handleNavigations(menu.path)}
-                        className={pathname === menu.path ?  styles.active : ''}
-                    >
-                        <Image src={menu.icon} height={20} width={20} alt='menu-icon'/>
-                        <span className={styles.sidebar__nav_title}>{menu.name}</span>
-                    </button>
-                )
-            })}
+                {MENU_LIST.map((menu, index) => (
+                    pathname.length < 2 ? (
+                        <button
+                            key={index}
+                            onClick={() => handleNavigations(menu.path)}
+                            className={pathname === menu.path ? styles.active : ''}
+                        >
+                            <Image src={menu.icon} height={20} width={20} alt='menu-icon' />
+                            <span className={styles.sidebar__nav_title}>{menu.name}</span>
+                        </button>
+                    ) : (
+                        <button 
+                            key={index}
+                            onClick={() => handleNavigations(menu.path)}
+                                className={menu.path.length > 2 && pathname.slice(0, menu.path.length) === menu.path ?  styles.active : ''}
+                        >
+                            <Image src={menu.icon} height={20} width={20} alt='menu-icon'/>
+                            <span className={styles.sidebar__nav_title}>{menu.name}</span>
+                        </button>
+                    )
+                ))}
         </nav>
     )
 }
