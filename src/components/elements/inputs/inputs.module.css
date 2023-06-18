@@ -32,3 +32,41 @@
     font-size: .8em;
     color: #0D6EFD;
 }
+
+.tags__wrapper {
+    display: flex;
+    gap: 4px;
+    font-size: .8em;
+    padding: 9px 12px 8px 12px;
+    color: var(--font-black); 
+    border-radius: 6px;
+    border: 1.3px solid #d0d7de;  
+}
+
+.tags__wrapper:focus {
+    border: 1px solid blue;
+}
+
+.tag {
+    padding: 2px 4px 4px 6px;
+    background-color: #f1c4c4;
+    border-radius: 5px;
+}
+
+.close {
+    margin-left: 3px;
+    font-weight: 500;
+    padding: 0px 3px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.close:hover {
+    background-color: #f3d8d8;
+}
+
+.tags__wrapper input {
+    width: 100%;
+    border: none;
+    outline: none;
+}

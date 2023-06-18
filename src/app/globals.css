@@ -74,3 +74,60 @@ button {
 .link {
   color: var(--blue-button);
 }
+
+.quil-content {
+  line-height: 1.5;
+}
+
+.quil-content h1 {
+  font-size: 2em;
+}
+
+.quil-content h2 {
+  font-size: 1.5em;
+}
+
+.quil-content h3 {
+  font-size: 1.2em;
+}
+
+.quil-content p {
+  margin-bottom: 10px;
+}
+
+.quil-content a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.quil-content  ul, .quil-content ol {
+  margin-left: 22px;
+  margin-bottom: 10px;
+}
+
+.quil-content blockquote {
+  color: #656668;
+  border-left: 4px solid #ccc;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding-left: 16px;
+}
+
+.quil-content code {
+  font-size: 90%;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.quil-content pre {
+  white-space: pre-wrap;
+  margin-bottom: 2px;
+  margin-top: 5px;
+  padding: 8px 10px;
+  background-color: #23241f;
+  color: #f8f8f2;
+  overflow-x: visible;
+  border-radius: 10px;
+} 

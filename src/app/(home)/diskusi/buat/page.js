@@ -1,6 +1,9 @@
 import jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import FormDiskusi from "./FormDiskusi";
+import Boarding from "@/components/elements/boarding/Boarding";
+import styles from "./style.module.css";
 
 async function AuthPage() {
     // await authPageAdmin
@@ -9,11 +12,18 @@ async function AuthPage() {
     if (!user) {
         redirect('/auth/login')
     }
-    return
+    return user
 }
 
 export default async function Page() {
-    await AuthPage()
-
-    return <h1>Hello, Next.js!</h1>;
+    const user = await AuthPage()
+    return (
+        <>
+            <section className={styles.home__content}>        
+                <FormDiskusi userId={user.id} />
+            </section>
+            
+            <Boarding />
+        </>
+    );
 }

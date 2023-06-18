@@ -35,9 +35,7 @@ export default async function DiskusiList({diskusi, metadata}) {
                                     <p>{diskusi?.title}</p>
                                 </Link>
                             </div>
-                            <div className={styles.diskusi__list_desk}>
-                                {diskusi?.desk}
-                            </div>
+    
                             <div className={styles.diskusi__list_detail}>
                                 <div className={styles.tags__wrap}>
                                     {diskusi.tags.map(tag => (

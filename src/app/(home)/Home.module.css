@@ -13,13 +13,6 @@
     font-weight: 500;
 }
 
-.boarding {
-    position: sticky;
-    top: 0;
-    flex: 1 1;
-    padding: 18px 14px;
-
-}
 
 @media only screen and (max-width: 1030px) {
 
