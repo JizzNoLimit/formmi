@@ -3,6 +3,39 @@
     padding: 18px 24px;
 }
 
+.diskusi__wrapper {
+    width: 100%;
+    margin-bottom: 42px;
+}
+
+.diskusi__header {
+    margin-bottom: 18px;
+    padding: 12px 0;
+    border-bottom: 1.3px solid var(--border-items);
+}
+
+.diskusi__header time {
+    font-size: .9em;
+}
+
+.diskusi__header_title {
+    padding-bottom: 12px;
+}
+
+.tags__wrap {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.diskusi__tags {
+    display: inline-block;
+    font-size: .8em;
+    padding: 5px 8px 6px 8px;
+    background-color: #f1c4c4;
+    border-radius: 4px;
+}
+
 @media only screen and (max-width: 1030px) {
 
     .home__content {
