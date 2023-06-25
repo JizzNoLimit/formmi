@@ -36,6 +36,80 @@
     border-radius: 4px;
 }
 
+.komentar__wrapper {
+    padding: 32px 0;
+    margin-bottom: 42px;
+}
+
+.komentar__header {
+    width: 100%;
+    display: block;
+    font-size: 1.3em;
+    margin-bottom: 24px;
+    padding: 12px 0;
+    border-bottom: 1.6px solid var(--border-items);
+}
+
+/* .komentar__list {
+    padding: 18px 0;
+} */
+
+.komentar__list {
+    margin-bottom: 16px;
+}
+
+.komentar__aktivitas {
+    display: block;
+    font-size: .9em;
+    color: #a8a5a5;
+    margin-bottom: 12px;
+}
+
+.koment__user {
+    display: flex;
+    gap: 8px;
+    padding: 12px 0;
+}
+
+.koment__user_img {
+    width: 38px;
+    height: 38px;
+    background-color: #a8a5a5;
+    border-radius: 8px;
+}
+
+.koment__user_role {
+    font-size: .7em;
+    padding: 2px 6px;
+    color: white;
+    background-color: #757ee4;
+    border-radius: 5px;
+}
+
+.koment__konten {
+    margin-bottom: 8px;
+    padding: 20px 18px;
+    border: 1.6px solid var(--border-items);
+    border-radius: 8px;
+}
+
+.komentar__balas {
+    padding: 8px 18px;
+}
+
+.komentar__balas_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .9em;
+    padding: 4px 12px;
+}
+
+.komentar__balas_btn:hover {
+    outline: 1px solid green;
+    border-radius: 8px;
+}
+
 @media only screen and (max-width: 1030px) {
 
     .home__content {
