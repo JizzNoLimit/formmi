@@ -1,10 +1,11 @@
 import Link from "next/link";
 import styles from "./style.module.css";
 import api from "@/api";
+import TimeAgo from "@/lib/timeAgo";
 
 
 export default async function DiskusiList({diskusi, metadata}) {
-    
+
     return (
         <div className={styles.diskusi__wrapper}>
             <div className={styles.diskusi__header}>
@@ -14,7 +15,7 @@ export default async function DiskusiList({diskusi, metadata}) {
                 </div>
                 <div>
                     <Link href={`/diskusi/buat`}>
-                        <button className={styles.diskusi__buatBtn}>Buat</button>
+                        <button className={styles.diskusi__buatBtn}>Buat Pertanyaan</button>
                     </Link>
                 </div>
             </div>
@@ -45,6 +46,16 @@ export default async function DiskusiList({diskusi, metadata}) {
                                             </span>
                                         </Link>
                                     ))}
+                                </div>
+
+                                <div className={styles.user__created}>
+                                    <div className={styles.informasi__aktivitas}>Aktifitas terakhir {TimeAgo(Date.now(), diskusi.updated_at)}</div>
+                                    <div className={styles.informasi__user}>
+                                        <div className={styles.informasi__user_username}>
+                                            {diskusi?.author}
+                                        </div>
+                                        <div className={styles.informasi__user_img}></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
