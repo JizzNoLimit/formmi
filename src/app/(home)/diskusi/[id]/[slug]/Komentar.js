@@ -54,6 +54,30 @@ export default function Komentar({komentar, count, user, diskusi_id}) {
         }
     }
 
+    const handleSubmitKomen = async () => {
+        try {
+            setLoading(true)
+            if (!user) {
+                router.push('/auth/login')
+            } else {
+                const data = {
+                    diskusi_id,
+                    user_id: user.id,
+                    konten: koment,
+                }
+
+                await api.post('/komentar', data)
+                setLoading(false)
+                setBalas(0)
+                setKoment('')
+                router.replace(window.location.pathname)
+            }
+        } catch (error) {
+            setLoading(false)
+            console.log(error)
+        }
+    }
+
     return (
         <div className={styles.komentar__wrapper}>
             <span className={styles.komentar__header}>{count} Komentar</span>
@@ -67,7 +91,9 @@ export default function Komentar({komentar, count, user, diskusi_id}) {
                             </div>
                         </div>
                         <span className={styles.komentar__aktivitas}>Komentar {TimeAgo(Date.now(), koment?.created_at)}</span>
-                        <div className={styles.koment__konten}>{koment?.konten}</div>
+                        <div className={styles.koment__konten}>
+                            <article className="quil-content" dangerouslySetInnerHTML={{ __html:  koment?.konten }} />
+                        </div>
 
                         <div className={balas == 0 || parseInt(koment?.id) != balas ? `${styles.none}` : `${styles.komentar__balas}`}>
                             <textarea 
@@ -127,12 +153,18 @@ export default function Komentar({komentar, count, user, diskusi_id}) {
                     </div>
                 ))}
            
-            <div>
+            <div className={styles.komentar__editor}>
                 <span>Komentar kamu</span>
                 <Editor 
                     value={koment}
                     onChange={handleChange}
                 />
+                <button
+                    onClick={() => handleSubmitKomen()}
+                    className={styles.komentar__btn_kirim}
+                >
+                    {loading ? 'Loading...' : 'Komentar'}
+                </button>
             </div>
         </div>
     )

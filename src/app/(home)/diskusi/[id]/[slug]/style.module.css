@@ -180,6 +180,19 @@
     color: #a8a5a5;
 }
 
+.komentar__editor span {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.komentar__btn_kirim {
+    margin-top: 92px;
+    padding: 6px 14px;
+    color: white;
+    background-color: var(--green-button);
+    border-radius: 8px;
+}
+
 @media only screen and (max-width: 1030px) {
 
     .home__content {
