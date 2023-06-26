@@ -10,15 +10,17 @@ export function LayoutClient({children, user}) {
 
     return (
         <main className={styles.layout}>
-            <NavbarClient user={user} />
-            <section className={styles.layout__container}>
-                <aside className={styles.sidebar}>
-                    <SidebarClient />
-                </aside>
-                <section className={styles.content}>
-                    {children}
+            <div>
+                <NavbarClient user={user} />
+                <section className={styles.layout__container}>
+                    <aside className={styles.sidebar}>
+                        <SidebarClient />
+                    </aside>
+                    <section className={styles.content}>
+                        {children}
+                    </section>
                 </section>
-            </section>
+            </div>
         </main>
     )
 }
