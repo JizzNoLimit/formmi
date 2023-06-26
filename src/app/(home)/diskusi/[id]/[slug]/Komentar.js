@@ -4,11 +4,14 @@ import styles from "./style.module.css";
 import { useState } from "react";
 import TimeAgo from "@/lib/timeAgo";
 import api from "@/api";
+import { useRouter } from "next/navigation";
 
-export default function Komentar({komentar, count}) {
+export default function Komentar({komentar, count, user, diskusi_id}) {
     const [koment, setKoment] = useState('')
     const [reply, setReply] = useState('')
     const [balas, setBalas] = useState(0)
+    const [loading, setLoading] = useState(false)
+    const router = useRouter()
 
     const handleChange = (desk) => {
         setKoment(desk)
@@ -28,12 +31,25 @@ export default function Komentar({komentar, count}) {
 
     const handleSubmitReply = async (id) => {
         try {
-            const koment = {
-                parent_id: id
+            setLoading(true)
+            if (!user) {
+                router.push('/auth/login')
+            } else {
+                const koment = {
+                    diskusi_id,
+                    user_id: user.id,
+                    parent_id: id,
+                    konten: reply,
+                }
+    
+                await api.post('/komentar', koment)
+                setLoading(false)
+                setBalas(0)
+                router.replace(window.location.pathname)
             }
 
-            await api.post('/komentar', koment)
         } catch (error) {
+            setLoading(false)
             console.log(error)
         }
     }
@@ -55,6 +71,7 @@ export default function Komentar({komentar, count}) {
 
                         <div className={balas == 0 || parseInt(koment?.id) != balas ? `${styles.none}` : `${styles.komentar__balas}`}>
                             <textarea 
+                                required
                                 placeholder="Tulis balasan komentar..."
                                 className={styles.komentar__balas_input}
                                 onChange={(e) => handleChangeBalas(e)}
@@ -66,12 +83,20 @@ export default function Komentar({komentar, count}) {
                                 >
                                     Batal
                                 </button>
-                                <button 
-                                    onClick={() => handleSubmitReply(koment?.id)} 
-                                    className={styles.komentar__balas_btn_kirim}
-                                >
-                                    Kirim
-                                </button>
+                                {reply ? (
+                                    <button 
+                                        onClick={() => handleSubmitReply(koment?.id)} 
+                                        className={styles.komentar__balas_btn_kirim}
+                                    >
+                                        {loading ? 'Loading...' : 'kirim'}
+                                    </button>
+                                ) : (
+                                    <button 
+                                        className={`${styles.komentar__balas_btn_kirim} ${styles.disabled}`}
+                                    >
+                                        {loading ? 'Loading...' : 'kirim'}
+                                    </button>
+                                )}
                             </div>
                         </div>
                             <button

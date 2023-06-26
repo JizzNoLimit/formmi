@@ -122,6 +122,11 @@
     border-radius: 8px;
 }
 
+.disabled {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
 .komentar__balas_input {
     width: 100%;
     min-height: 70px;

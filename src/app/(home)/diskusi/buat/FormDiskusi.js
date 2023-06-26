@@ -31,7 +31,7 @@ export default function FormDiskusi({userId}) {
     
             await api.post('/forums', data)
             setLoading(false)
-            router.push('/')
+            router.refresh()
         } catch (error) {
             setLoading(false)
         }
