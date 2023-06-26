@@ -45,7 +45,8 @@ export default function Komentar({komentar, count, user, diskusi_id}) {
                 await api.post('/komentar', koment)
                 setLoading(false)
                 setBalas(0)
-                router.replace(window.location.pathname)
+                setReply('')
+                router.refresh()
             }
 
         } catch (error) {
@@ -70,7 +71,7 @@ export default function Komentar({komentar, count, user, diskusi_id}) {
                 setLoading(false)
                 setBalas(0)
                 setKoment('')
-                router.replace(window.location.pathname)
+                router.refresh()
             }
         } catch (error) {
             setLoading(false)
