@@ -7,18 +7,7 @@ import TimeAgo from "@/lib/timeAgo";
 export default async function DiskusiList({diskusi, metadata}) {
 
     return (
-        <div className={styles.diskusi__wrapper}>
-            <div className={styles.diskusi__header}>
-                <div>
-                    <h2>Diskusi Teratas</h2>
-                    <p><strong>Total:</strong> {metadata?.totalRows} diskusi</p>
-                </div>
-                <div>
-                    <Link href={`/diskusi/buat`}>
-                        <button className={styles.diskusi__buatBtn}>Buat Pertanyaan</button>
-                    </Link>
-                </div>
-            </div>
+        <>
             {diskusi.length == 0 ? (
                 <div className={styles.diskusi__emty}>
                     <div>
@@ -83,6 +72,6 @@ export default async function DiskusiList({diskusi, metadata}) {
             ) : (
                 <div></div>
             )}
-        </div>
+        </>
     )
 }

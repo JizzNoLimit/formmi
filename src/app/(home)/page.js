@@ -16,6 +16,7 @@ async function getData(page, limit) {
 export default async function Page({ searchParams }) {
     const { page, limit } = searchParams
     const data = await getData(parseInt(page, limit))
+    const title = 'Diskusi Teratas'
 
     return (
         <>
@@ -24,7 +25,20 @@ export default async function Page({ searchParams }) {
                     
                 </header>
                 
-                <DiskusiList diskusi={data.data} metadata={data.metadata} />
+                <div>
+                    <div className={styles.diskusi__header}>
+                        <div>
+                            <h2>FORMMI POLSRI</h2>
+                            <p>Forum Mahasiswa Politeknik Negeri Sriwijaya</p>
+                        </div>
+                        <div>
+                            <Link href={`/diskusi/buat`}>
+                                <button className={styles.diskusi__buatBtn}>Buat Pertanyaan</button>
+                            </Link>
+                        </div>
+                    </div>   
+                    <DiskusiList diskusi={data.data} metadata={data.metadata} title={title} />
+                </div>
 
             </section>
             

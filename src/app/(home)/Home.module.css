@@ -1,7 +1,7 @@
 /* Home Page */
 .home__content {
     width: 74%;
-    padding: 18px 0px;
+    padding: 18px 24px;
 }
 
 .home__content_header {
@@ -13,6 +13,24 @@
     font-weight: 500;
 }
 
+.diskusi__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.diskusi__header p {
+    margin-top: 6px;
+}
+
+.diskusi__buatBtn {
+    font-weight: 600;
+    padding: 10px 18px;
+    color: #ffffff;
+    background-color: var(--green-button);
+    border-radius: 8px;
+}
 
 @media only screen and (max-width: 1030px) {
 
